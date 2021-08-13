@@ -14,7 +14,7 @@ const SearchGif = () => {
     const handleSearchResult = (event) => {
         event.preventDefault()
         fetch(
-            `${process.env.REACT_APP_GIPHY_ENDPOINT}/search?api_key=${process.env.REACT_APP_GIPHY_KEY}&q=${searchInput}&limit=12`
+            `https://api.giphy.com/v1/gifs/search?api_key=htHzK0393hnR4YPJStjYmSe0pmOgWsF6&q=${searchInput}&limit=12`
         )
         .then(response => response.json())
         .then(response => {
