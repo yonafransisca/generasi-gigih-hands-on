@@ -7,7 +7,7 @@ const TrendingGif = () => {
 
     useEffect(() => {
         fetch(
-            `https://api.giphy.com/v1/gifs/trending?api_key=htHzK0393hnR4YPJStjYmSe0pmOgWsF6&limit=12&offset=5`
+            `${process.env.REACT_APP_GIPHY_ENDPOINT}/trending?api_key=${process.env.REACT_APP_GIPHY_KEY}&limit=12&offset=5`
         )
         .then(response => response.json())
         .then(response => {
